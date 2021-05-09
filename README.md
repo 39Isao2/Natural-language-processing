@@ -13,4 +13,8 @@
 「ジュピターノートブック」、「ジュパイターノートブック」と読みます。 
 
 **Anaconda（Pythonのライブラリが豊富に含まれた環境）** と一緒にインストールします。 
-https://www.anaconda.com/products/individual
+https://www.anaconda.com/products/individual <br>
+
+<img src="img/jy.png" width="600px"><br>
+
+new → Folder から 「jupyter」というフォルダを作成
