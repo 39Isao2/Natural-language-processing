@@ -9,3 +9,5 @@
 参考:https://qiita.com/cr-fun/items/cc82a85c572daac0b5c5
 
 ## jupyter notebookのインストール
+「Jupyter Notebook」は、PythonなどをWebブラウザ上で記述・実行できる統合開発環境です。<br>
+「ジュピターノートブック」、「ジュパイターノートブック」と読みます。 
