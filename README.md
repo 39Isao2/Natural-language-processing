@@ -11,3 +11,6 @@
 ## jupyter notebookのインストール
 「Jupyter Notebook」は、PythonなどをWebブラウザ上で記述・実行できる統合開発環境です。<br>
 「ジュピターノートブック」、「ジュパイターノートブック」と読みます。 
+
+**Anaconda（Pythonのライブラリが豊富に含まれた環境）** と一緒にインストールします。 
+https://www.anaconda.com/products/individual
