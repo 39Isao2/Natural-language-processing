@@ -20,3 +20,5 @@ https://www.anaconda.com/products/individual <br>
 new → Folder から フォルダを作成 → チェックボックスにチェックを入れてRenameして「jupyter」というフォルダ名に変更<br><br>
 
 続いて、新規のノートブックを作成します。「jupyter」フォルダに移動後、「New」から「Python3」をクリックして、新規ノートブックを作成します。<br>
+
+<img src="img/nt.png" width="800px"><br>
