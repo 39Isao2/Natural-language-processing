@@ -22,3 +22,18 @@ new → Folder から フォルダを作成 → チェックボックスにチ�
 続いて、新規のノートブックを作成します。「jupyter」フォルダに移動後、「New」から「Python3」をクリックして、新規ノートブックを作成します。<br>
 
 <img src="img/nt.png" width="800px"><br>
+
+
+## 
+
+```
+from janome.tokenizer import Tokenizer
+
+t = Tokenizer()
+
+s = "私はご飯を食べる。そして学校へ行く。"
+
+for token in t.tokenize(s):
+    print(token)
+    
+```
