@@ -26,6 +26,12 @@ new → Folder から フォルダを作成 → チェックボックスにチ�
 
 ## 実践（形態素解析）
 
+事前にコマンドプロンプトで「janome」ライブラリをインストール
+```
+pip install janome
+
+```
+
 ```
 from janome.tokenizer import Tokenizer
 
