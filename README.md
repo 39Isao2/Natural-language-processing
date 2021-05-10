@@ -43,3 +43,27 @@ for token in t.tokenize(s):
     print(token)
     
 ```
+
+# スクレイピング
+
+クレイピングとは“データを収集した上で利用しやすく加工すること”です。<br>
+英単語のscraping（こすり、ひっかき）に由来し、特にWeb上から必要なデータを取得することをWebスクレイピングといいます。<br>
+参考:https://www.ymori.com/books/python2nen/test2.html
+
+HTMLを簡単に解析できるライブラリ、「Beautiful Soup」をインストール 
+```
+pip install beautifulsoup4
+```
+
+```
+import requests
+from bs4 import BeautifulSoup
+# Webページを取得して解析する
+
+load_url = "https://www.ymori.com/books/python2nen/test1.html"
+html = requests.get(load_url)
+soup = BeautifulSoup(html.content, "html.parser")
+
+# HTML全体を表示する
+print(soup)
+```
