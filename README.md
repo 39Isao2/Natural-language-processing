@@ -83,3 +83,11 @@ print(soup.find("title"))    # タグを検索して表示
 print(soup.find("h2"))
 print(soup.find("li"))
 ```
+
+これだとタグつきの状態なので、ここから文字列だけを取り出すには最後に「.text」をつけます。
+```
+# title、h2、liタグを検索して、その文字列を表示する
+print(soup.find("title").text)    # .textを追加
+print(soup.find("h2").text)
+print(soup.find("li").text)
+```
