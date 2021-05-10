@@ -84,7 +84,7 @@ print(soup.find("h2"))
 print(soup.find("li"))
 ```
 
-これだとタグつきの状態なので、ここから文字列だけを取り出すには最後に「.text」をつけます。
+#### これだとタグつきの状態なので、ここから文字列だけを取り出すには最後に「.text」をつけます。
 ```
 # title、h2、liタグを検索して、その文字列を表示する
 print(soup.find("title").text)    # .textを追加
@@ -92,7 +92,7 @@ print(soup.find("h2").text)
 print(soup.find("li").text)
 ```
 
-.fi nd( "タグ名" )を使うと、要素を見つけることができるが、
+#### .fi nd( "タグ名" )を使うと、要素を見つけることができるが、
 取得できるのは見つかった最初の1つだけ。
 一般的なWebページには要素はもっとたくさんあるので、「すべての要素」を探してみます。
 <br>
@@ -108,5 +108,49 @@ soup = BeautifulSoup(html.content, "html.parser")
 
 # すべてのliタグを検索して、その文字列を表示する
 for element in soup.find_all("li"):    # すべてのliタグを検索して表示
+    print(element.text)
+```
+#### 「id属性」や「class属性」の名前を使い、範囲を絞り込んで検索することができます。
+
+```
+要素 = soup.find(id="id名")
+```
+
+```
+要素 = soup.find(class_="class名")
+※「class」はPythonの予約語でそのままでは使えないので「class_」と書きます。
+
+```
+
+idが「chap2」の要素を検索します。
+```
+import requests
+from bs4 import BeautifulSoup
+
+# Webページを取得して解析する
+load_url = "https://www.ymori.com/books/python2nen/test2.html"
+html = requests.get(load_url)
+soup = BeautifulSoup(html.content, "html.parser")
+
+# IDで検索して、そのタグの中身を表示する
+chap2 = soup.find(id="chap2")    # idが「chap2」の範囲の要素を表示
+print(chap2)
+```
+
+
+今度は、この要素に対してliタグをすべて探してみましょう。
+
+```
+import requests
+from bs4 import BeautifulSoup
+
+# Webページを取得して解析する
+load_url = "https://www.ymori.com/books/python2nen/test2.html"
+html = requests.get(load_url)
+soup = BeautifulSoup(html.content, "html.parser")
+
+# IDで検索し、その中のすべてのliタグを検索して表示する
+chap2 = soup.find(id="chap2")    # idが「chap2」を検索
+for element in chap2.find_all("li"):    # その中のliタグの文字列を表示
     print(element.text)
 ```
