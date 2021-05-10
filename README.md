@@ -91,3 +91,22 @@ print(soup.find("title").text)    # .textを追加
 print(soup.find("h2").text)
 print(soup.find("li").text)
 ```
+
+.fi nd( "タグ名" )を使うと、要素を見つけることができるが、
+取得できるのは見つかった最初の1つだけ。
+一般的なWebページには要素はもっとたくさんあるので、「すべての要素」を探してみます。
+<br>
+
+```
+import requests
+from bs4 import BeautifulSoup
+
+# Webページを取得して解析する
+load_url = "https://www.ymori.com/books/python2nen/test2.html"
+html = requests.get(load_url)
+soup = BeautifulSoup(html.content, "html.parser")
+
+# すべてのliタグを検索して、その文字列を表示する
+for element in soup.find_all("li"):    # すべてのliタグを検索して表示
+    print(element.text)
+```
