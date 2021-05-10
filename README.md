@@ -24,7 +24,7 @@ new → Folder から フォルダを作成 → チェックボックスにチ�
 <img src="img/nt.png" width="800px"><br>
 
 
-## 
+## 実践（形態素解析）
 
 ```
 from janome.tokenizer import Tokenizer
